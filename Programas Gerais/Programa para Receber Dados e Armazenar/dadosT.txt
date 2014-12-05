@@ -1,0 +1,15 @@
+soma
+Quantidade de numeros de cada lista : 5
+Tipo de Arquivo : Entrada
+Tipo de dados : Inteiros
+        78
+        98
+        54
+        74
+        65
+
+        14
+        25
+        36
+        74
+        85
