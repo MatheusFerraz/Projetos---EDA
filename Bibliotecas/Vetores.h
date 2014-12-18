@@ -2,151 +2,151 @@
 
 /*Procedimento para Calcular a Soma entre os Números armazenados em Vetores,
 escrevendo resultados em um arquivo*/
-void calcularSoma(float *vet1, float *vet2, float *vet3, int t, bool confirmReal)
+void calcular_soma(float *vetor_um, float *vetor_dois, float *vetor_resultante, int tamanho_vetor, bool confirm_real)
 {
 	int i;
 
-	FILE *arquivoSaida;
-	arquivoSaida = fopen("Plus.txt","w");
+	FILE *arquivo_saida;
+	arquivo_saida = fopen("Soma.txt","w");
 
-	fprintf(arquivoSaida,"Tipo : Soma\n");
-	if(confirmReal)
+	fprintf(arquivo_saida,"Tipo : Soma\n");
+	if(confirm_real)
 	{
-		fprintf(arquivoSaida,"Tipo dos Dados : Real\n");
+		fprintf(arquivo_saida,"Tipo dos Dados : Real\n");
 		for(i=0;i<t;i++)
 		{
-			vet3[i] = vet1[i] + vet2[i];
-			fprintf(arquivoSaida,"%f\n",vet3[i]);
+			vetor_resultante[i] = vetor_um[i] + vetor_dois[i];
+			fprintf(arquivo_saida,"%f\n",vetor_resultante[i]);
 		}
 	}
 	else{
-		fprintf(arquivoSaida,"Tipo dos Dados : Inteiro\n");
+		fprintf(arquivo_saida,"Tipo dos Dados : Inteiro\n");
 		for(i=0;i<t;i++)
 		{
-			vet3[i] = vet1[i] + vet2[i];
-			fprintf(arquivoSaida,"%d\n",(int)vet3[i]);
+			vetor_resultante[i] = vetor_um[i] + vetor_dois[i];
+			fprintf(arquivo_saida,"%d\n",(int)vetor_resultante[i]);
 		}
 	}
 
-	fclose(arquivoSaida);
+	fclose(arquivo_saida);
 }
 
 /*Procedimento para Calcular a Diferença entre os Números armazenados em Vetores,
 escrevendo resultados em um arquivo*/
-void calcularSubtracao(float *vet1, float *vet2, float *vet3, int t, bool confirmReal)
+void calcular_subtracao(float *vetor_um, float *vetor_dois, float *vetor_resultante, int tamanho_vetor, bool confirm_real)
 {
 	int i;
 
-	FILE *arquivoSaida;
-	arquivoSaida = fopen("Minus.txt","w");
+	FILE *arquivo_saida;
+	arquivo_saida = fopen("Diferenca.txt","w");
 
-	fprintf(arquivoSaida,"Tipo : Subtracao\n");
-	if(confirmReal)
+	fprintf(arquivo_saida,"Tipo : Subtracao\n");
+	if(confirm_real)
 	{
-		fprintf(arquivoSaida,"Tipo dos Dados : Real\n");
+		fprintf(arquivo_saida,"Tipo dos Dados : Real\n");
 		for(i=0;i<t;i++)
 		{
-			vet3[i] = vet1[i] - vet2[i];
-			fprintf(arquivoSaida,"%f\n",vet3[i]);
+			vetor_resultante[i] = vetor_um[i] - vetor_dois[i];
+			fprintf(arquivo_saida,"%f\n",vetor_resultante[i]);
 		}
 	}
 	else{
-		fprintf(arquivoSaida,"Tipo dos Dados : Inteiro\n");
+		fprintf(arquivo_saida,"Tipo dos Dados : Inteiro\n");
 		for(i=0;i<t;i++)
 		{
-			vet3[i] = vet1[i] - vet2[i];
-			fprintf(arquivoSaida,"%d\n",(int)vet3[i]);
+			vetor_resultante[i] = vetor_um[i] - vetor_dois[i];
+			fprintf(arquivo_saida,"%d\n",(int)vetor_resultante[i]);
 		}
 	}
 
-	fclose(arquivoSaida);
+	fclose(arquivo_saida);
 }
 
 /*Procedimento para Calcular o Produto entre os números armazenados em Vetores,
 escrevendo resultados em um arquivo*/
-void calcularMultiplicacao(float *vet1, float *vet2, float *vet3, int t, bool confirmReal)
+void calcular_multiplicacao(float *vetor_um, float *vetor_dois, float *vetor_resultante, int tamanho_vetor, bool confirm_real)
 {
 	int i;
 
-	FILE *arquivoSaida;
-	arquivoSaida = fopen("Produto.txt","w");
+	FILE *arquivo_saida;
+	arquivo_saida = fopen("Produto.txt","w");
 
-	fprintf(arquivoSaida,"Tipo: MultPonto\n");
-	fprintf(arquivoSaida,"Dimensao: %d\n",t);
-	if(confirmReal)
+	fprintf(arquivo_saida,"Tipo: MultPonto\n");
+	fprintf(arquivo_saida,"Dimensao: %d\n",tamanho_vetor);
+	if(confirm_real)
 	{
-		fprintf(arquivoSaida,"Tipo: Real\n");
+		fprintf(arquivo_saida,"Tipo: Real\n");
 		for(i=0;i<t;i++)
 		{
-			vet3[i] = vet1[i] * vet2[i];
-			fprintf(arquivoSaida,"%f\n",vet3[i]);
+			vetor_resultante[i] = vetor_um[i] * vetor_dois[i];
+			fprintf(arquivo_saida,"%f\n",vetor_resultante[i]);
 		}
 	}
 	else{
-		fprintf(arquivoSaida,"Tipo: Inteiro\n");
+		fprintf(arquivo_saida,"Tipo: Inteiro\n");
 		for(i=0;i<t;i++)
 		{
-			vet3[i] = vet1[i] * vet2[i];
-			fprintf(arquivoSaida,"%d\n",(int)vet3[i]);
+			vetor_resultante[i] = vetor_um[i] * vetor_dois[i];
+			fprintf(arquivo_saida,"%d\n",(int)vetor_resultante[i]);
 		}
 	}
 
-	fclose(arquivoSaida);
+	fclose(arquivo_saida);
 }
 
 /*Procedimento para Calcular o Divisão entre os números armazenados em Vetores,
 escrevendo resultados em um arquivo*/
-void calcularDivisao(float *vet1, float *vet2, float *vet3, int t, bool confirmReal)
+void calcular_divisao(float *vetor_um, float *vetor_dois, float *vetor_resultante, int tamanho_vetor, bool confirm_real)
 {
 	int i;
 
-	FILE *arquivoSaida;
-	arquivoSaida = fopen("Quociente.txt","w");
+	FILE *arquivo_saida;
+	arquivo_saida = fopen("Quociente.txt","w");
 
-	fprintf(arquivoSaida,"Tipo: DivPonto\n");
-	fprintf(arquivoSaida,"Dimensao: %d\n",t);
-	if(confirmReal)
+	fprintf(arquivo_saida,"Tipo: DivPonto\n");
+	fprintf(arquivo_saida,"Dimensao: %d\n",tamanho_vetor);
+	if(confirm_real)
 	{
-		fprintf(arquivoSaida,"Tipo: Real\n");
+		fprintf(arquivo_saida,"Tipo: Real\n");
 		for(i=0;i<t;i++)
 		{
-			vet3[i] = vet1[i] / vet2[i];
-			fprintf(arquivoSaida,"%f\n",vet3[i]);
+			vetor_resultante[i] = vetor_um[i] / vetor_dois[i];
+			fprintf(arquivo_saida,"%f\n",vetor_resultante[i]);
 		}
 	}
 	else{
-		fprintf(arquivoSaida,"Tipo: Inteiro\n");
+		fprintf(arquivo_saida,"Tipo: Inteiro\n");
 		for(i=0;i<t;i++)
 		{
-			vet3[i] = vet1[i] / vet2[i];
-			fprintf(arquivoSaida,"%d\n",(int)vet3[i]);
+			vetor_resultante[i] = vetor_um[i] / vetor_dois[i];
+			fprintf(arquivo_saida,"%d\n",(int)vetor_resultante[i]);
 		}
 	}
 
-	fclose(arquivoSaida);
+	fclose(arquivo_saida);
 }
 
-//Função que retorna um ponteiro para alocação de dados do tipo int
-int *vetorDeInteiros(int qtdElementos)
+//Função que retorna um ponteiro para alocação de dados do tipo inteiro
+int *aloca_vetor_inteiros(int qtd_elementos)
 {
 	int *vetor;
-	vetor = (int*)calloc(qtdElementos,sizeof(int));
+	vetor = (int*)calloc(qtd_elementos,sizeof(int));
 	return vetor;
 }
 
 //Função que retorna um ponteiro para alocação de dados do tipo float
-float *vetorDeFloats(int qtdElementos)
+float *aloca_vetor_float(int qtd_elementos)
 {
 	float *vetor;
-	vetor = (float*)calloc(qtdElementos,sizeof(float));
+	vetor = (float*)calloc(qtd_elementos,sizeof(float));
 	return vetor;
 }
 
-//Procedimento que ordena os elementos de um vetor - Algoritmo Bolha
-void algoritmoBolha(int sizeVet, int *vetor)
+//Procedimento que ordena os elementos de um vetor de inteiros - Algoritmo Bolha
+void bubble_sort_int(int tamanho_vetor, int *vetor)
 {
 	int final, cont;
-	for(final = sizeVet-1; final > 0; final --)
+	for(final = tamanho_vetor-1; final > 0; final --)
 	{
 		for(cont = 0; cont < final; cont ++)
 		{
@@ -160,10 +160,10 @@ void algoritmoBolha(int sizeVet, int *vetor)
 }
 
 //Procedimento que ordena os elementos de um vetor - Algoritmo Bolha para Float
-void algoritmoBolhaFloat(int sizeVet, float *vetor)
+void bubble_sort_float(int tamanho_vetor, float *vetor)
 {
 	int final, cont;
-	for(final = sizeVet-1; final > 0; final --)
+	for(final = tamanho_vetor-1; final > 0; final --)
 	{
 		for(cont = 0; cont < final; cont ++)
 		{
